@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>Biodata Mahasiswa</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Biodata Mahasiswa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <br />
+  <br />
+
+  <div style="margin-left: 5%">
+    <form action="index.php" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tname">Nama</label>
+          <input type="text" class="form-control" name="tname" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="temail">Email</label>
+          <input class="form-control" type="email" name="temail" name="temail" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdetail">Alamat</label>
+          <textarea class="form-control" name="talamat" rows="3" required></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdetail">Kota</label>
+          <!-- <textarea class="form-control" name="tkota" rows="3" required></textarea> -->
+          <input type="text" class="form-control" name="tkota" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tdetail">Provinsi</label>
+          <!-- <textarea class="form-control" name="tprovinsi" rows="3" required></textarea> -->
+          <input type="text" class="form-control" name="tprovinsi" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tsubject">Kelas</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject1" value="A" />
+              <label class="form-check-label" for="tsubject1">A</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject2" value="B" />
+              <label class="form-check-label" for="tsubject2">B</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject3" value="C1" />
+              <label class="form-check-label" for="tsubject3">C1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tsubject" id="tsubject4" value="C2" />
+              <label class="form-check-label" for="tsubject4">C2</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" name="add" class="btn btn-primary">Add</button>
+    </form>
+    
+    <br>
+
+    <!-- Tabel 1 - Task -->
+    <div style="display: inline-block; ">
+      <h3>Biodata</h3>
+      <!-- TABEL1 -->
+      <h4>Sort Ascending</h4>
+      <div>
+        <form method="post">
+          <button type="submit" name="resetsort" class="btn btn-success">Reset Sort</button>
+          <br>
+          <br>
+          <button type="submit" name="nama" class="btn btn-primary">Nama</button>
+          <button type="submit" name="kota" class="btn btn-primary">Kota</button> 
+          <button type="submit" name="provinsi" class="btn btn-primary">Provinsi</button> 
+          <button type="submit" name="kelas" class="btn btn-primary">Kelas</button> 
+        </form>
+      </div>
+      <table align="left" border="1" style="text-align: center;">
+        <tr>
+          <td>No</td>
+          <td style="width:20%">Nama</td>
+          <td style="width:10%">Email</td>
+          <td style="width:20%">Alamat</td>
+          <td style="width:5%">Kota</td>
+          <td style="width:5%">Provinsi</td>
+          <td style="width:5%">Kelas</td>
+          <td>Aksi</td>
+        </tr>
+        <tr>
+          <!-- DATA YG AKAN DIGANTI -->
+          DATA_TABEL
+        </tr>
+
+      </table>
+    </div>
+
+    
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
